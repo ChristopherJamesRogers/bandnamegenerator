@@ -1,0 +1,17 @@
+
+<%- include("partials/header.ejs") %>
+
+
+
+    <%if(locals.adjective && locals.noun) {%>
+      <h2>Your new band name is...</h2>
+    <h1><%= adjective %> <%= noun %></h1>
+<%} else {%>
+  <h1>Welcome to the<br>Band Name Generator</h1>
+  <h3>Click the button to generate your new band name</h3>
+<%}%>
+<form action="/submit" method="POST">
+  <input type="submit" value="Generate Name">
+</form>
+
+<%- include("partials/footer.ejs") %>
